@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import { FiMenu } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 export const Navbars = ({ dark, setDark }) => {
   const [open, setOpen] = useState(false);
   const scrollToSection = (id) => {
@@ -64,16 +65,16 @@ export const Navbars = ({ dark, setDark }) => {
           {open ? (
             <button
               onClick={() => setOpen(!open)}
-              className=" md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:scale-105 transition"
+              className=" md:hidden p-3 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:scale-105 transition"
             >
-              ss
+              <FiX />
             </button>
           ) : (
             <button
               onClick={() => setOpen(!open)}
-              className=" md:hidden p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:scale-105 transition"
+              className=" md:hidden p-3 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:scale-105 transition"
             >
-              kk
+              <FiMenu />
             </button>
           )}
         </div>
