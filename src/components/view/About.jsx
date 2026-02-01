@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
-import React from "react";
+import sru from "../../assets/SRU_LOGO.png"
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -27,25 +28,20 @@ const About = () => {
             Education
           </h1>
           <div className="w-full flex flex-col space-y-4 justify-center items-center py-4">
-            <div className="box sm:w-2/3 flex items-center">
-              <div className="w-48">
-                <img
-                  className="w-full h-full rounded-xl border-4 border-gray-100 dark:border-gray-900"
-                  src="https://erasmusplusfriends.eu/wp-content/uploads/2019/05/SRU_LOGO_compressed-1024x1024.png"
-                  alt=""
-                />
+            <Link to="/sru" className="box border sm:w-2/3 flex items-center ">
+              <img
+                className="size-35 rounded-full"
+                src={sru}
+                alt=""
+              />
+              <div className="ml-6 text-gray-700 dark:text-gray-300">
+                <p className="text-xl font-semibold mb-2">
+                  Svay Rieng University
+                </p>
+                <p className="text-sm ">Computer Science</p>
+                <p className="text-sm ">GPA: 3.41</p>
               </div>
-              <p className="ml-5 text-3xl font-bold text-gray-700 dark:text-gray-300">Svay Rieng University </p>
-            </div>
-            <div className="box sm:w-2/3 flex items-center ">
-              <div className=" w-48">
-                <img
-                  src="https://erasmusplusfriends.eu/wp-content/uploads/2019/05/SRU_LOGO_compressed-1024x1024.png"
-                  alt=""
-                />
-              </div>
-              <p className="ml-5 text-3xl font-bold text-gray-700 dark:text-gray-300">Kampong Rou High School</p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
