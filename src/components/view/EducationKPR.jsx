@@ -1,9 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { MdArrowBackIos } from "react-icons/md";
-import transcript from "../../assets/Transcript.jpg";
-import certificate from "../../assets/Certificate.png";
+import kpr from "../../assets/kpr.png";
 
-const EducationDetail = () => {
+const EducationKPR = () => {
   const View = "</> Code";
   const navigate = useNavigate();
   return (
@@ -24,17 +23,12 @@ const EducationDetail = () => {
           </div>
           <div className="w-full md:w-10/12 md:flex flex-col items-center mx-auto my-5 space-y-6">
             <h1 className="mb-6 text-2xl sm:text-4xl font-bold text-gray-700 dark:text-gray-300">
-              Svay Rieng University
+              Kampong Rou High School
             </h1>
             <img
               className="w-full border-2 border-amber-50 rounded-lg"
-              src={certificate}
-              alt="Certificate"
-            />
-            <img
-              className="w-full border-2 border-amber-50 rounded-lg"
-              src={transcript}
-              alt="Transcript"
+              src={kpr}
+              alt="Certificate of Kampong Rou High School"
             />
           </div>
         </div>
@@ -43,4 +37,4 @@ const EducationDetail = () => {
   );
 };
 
-export default EducationDetail;
+export default EducationKPR;

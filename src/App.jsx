@@ -10,6 +10,7 @@ import { Navbars } from "./components/view/Navbars";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Workdetail from "./components/view/Workdetail";
 import EducationDetail from "./components/view/EducationDetail";
+import EducationKPR from "./components/view/EducationKPR";
 
 function App() {
   const [dark, setDark] = useState(() => {
@@ -56,6 +57,7 @@ function App() {
           />
           <Route path="/work/:id" element={<Workdetail />} />
           <Route path="/sru" element={<EducationDetail />}/>
+          <Route path="/kpr" element={<EducationKPR />}/>
         </Routes>
       </div>
     </BrowserRouter>

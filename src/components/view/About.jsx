@@ -32,14 +32,26 @@ const About = () => {
               <img
                 className="size-35 rounded-full"
                 src={sru}
-                alt=""
+                alt="SRU"
               />
               <div className="ml-6 text-gray-700 dark:text-gray-300">
                 <p className="text-xl font-semibold mb-2">
                   Svay Rieng University
                 </p>
                 <p className="text-sm ">Computer Science</p>
-                <p className="text-sm ">GPA: 3.41</p>
+                <p className="text-sm ">GPA: 3.49</p>
+              </div>
+            </Link>
+            <Link to="/kpr" className="box border sm:w-2/3 flex items-center ">
+              <img
+                className="size-35 rounded-full"
+                src=""
+                alt="Kampong Rou High Schoolz"
+              />
+              <div className="ml-6 text-gray-700 dark:text-gray-300">
+                <p className="text-xl font-semibold mb-2">
+                  Kampong Rou High School
+                </p>
               </div>
             </Link>
           </div>
