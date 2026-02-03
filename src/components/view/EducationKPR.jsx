@@ -25,7 +25,7 @@ const EducationKPR = () => {
           <div className="w-full md:w-10/12 md:flex flex-col items-center mx-auto space-y-6 text-gray-700 dark:text-gray-300">
             <div className="flex flex-col justify-center items-center">
               <img src={kprlogo} alt="" className="size-40 rounded-full mt-5" />
-              <h1 className="text-2xl sm:text-4xl font-bold md:mt-2 ">
+              <h1 className="text-2xl sm:text-4xl font-bold md:mt-2  text-center">
                 Hun Sen Kompong Rou High School
               </h1>
               <p className="font-bold text-sm md:mt-5">2020</p>
