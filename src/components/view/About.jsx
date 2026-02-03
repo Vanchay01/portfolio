@@ -41,6 +41,7 @@ const About = () => {
                 </p>
                 <p className="text-sm ">Computer Science</p>
                 <p className="text-sm ">GPA: 3.49</p>
+                <p className="text-sm ">2020-2024</p>
               </div>
             </Link>
             <Link to="/kpr" className="box border sm:w-2/3 flex items-center ">
@@ -53,6 +54,7 @@ const About = () => {
                 <p className="text-xl font-semibold mb-2">
                   Kampong Rou High School
                 </p>
+                <p className="text-sm ">2020</p>
               </div>
             </Link>
           </div>

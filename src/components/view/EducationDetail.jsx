@@ -26,12 +26,11 @@ const EducationDetail = () => {
           <div className="w-full md:w-10/12 md:flex flex-col items-center mx-auto space-y-6 text-gray-700 dark:text-gray-300">
             <div className="flex flex-col justify-center items-center">
               <img src={sru} alt="" className="size-40 rounded-full mt-5" />
-              <h1 className="text-2xl sm:text-4xl font-bold ">
+              <h1 className="text-2xl sm:text-4xl font-bold md:mt-2 ">
                 Svay Rieng University
               </h1>
-              <p className="font-bold text-sm ">2020-2024</p>
+              <p className="font-bold text-sm md:mt-5">2020-2024</p>
             </div>
-
             <img
               className="w-full border-2 border-amber-50 rounded-lg"
               src={certificate}
