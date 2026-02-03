@@ -1,13 +1,88 @@
-import React from "react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_bkgcsd8",
+        "template_mvyb4lu",
+        form.current,
+        "7csjX-OvJvgUzwv97",
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send message");
+        },
+      );
+  };
+
   return (
-    <div className="h-screen w-full flex flex-col justify-center items-center dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-600 bg-gradient-to-b from-gray-100 to-gray-300">
-      <h1 className="text-5xl font-bold mb-4">Contact</h1>
-      <p className="text-xl text-gray-700 max-w-xl text-center">
-        Hi, I'm Chay! I'm a passionate web developer who loves building modern and responsive websites.
-      </p>
-    </div>
+    <article className=" bg-slate-100 dark:bg-gray-900 transition-colors duration-400 flex flex-col items-center">
+      <div className=" w-full sm:w-2/3 bg-gray-100 dark:bg-gray-900 flex justify-center py-4 transition-colors duration-400 ">
+        <div className="w-full max-w-7xl pt-16 px-4 transition-colors duration-400 ">
+          <h1 className="mb-4 text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300">
+            Contact me
+          </h1>
+          <div className="w-full flex justify-between bg-gray-300.">
+            <div className="w-full max-w-md bg-gray-600"></div>
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="space-y-4 max-w-md bg-gray-500"
+            >
+              <input
+                type="hidden"
+                name="time"
+                value={new Date().toLocaleString()}
+              />
+              <input type="hidden" name="title" value="Website Contact" />
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                className="w-full p-3 border rounded"
+                required
+              />
+              <input
+                type="email"
+                name="user_email"
+                placeholder="Your Email"
+                className="w-full p-3 border rounded"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                className="w-full p-3 border rounded"
+                rows="5"
+                required
+              ></textarea>
+              <button
+                type="submit"
+                className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer className="w-full bg-white dark:bg-gray-900 shadow z-50">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-center">
+          <p className="font-medium">© 2026 Meas Vanchay. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </article>
   );
 };
 

@@ -9,7 +9,7 @@ const Navbar = ({dark, setDark}) => {
   };
   console.log(dark)
   return (<>
-    <nav className=" top-0 w-fullbg-gray-900  text-white shadow-lg z-50">
+    <nav className=" top-0 w-full bg-gray-400  text-white shadow-lg z-50">
       <div className="max-w-6xl mx-auto flex justify-center space-x-6 py-4">
         <button
           onClick={() => setDark(!dark)}
