@@ -1,4 +1,4 @@
-[
+const work = [
   {
     "id": 1,
     "name": "portfolio",
@@ -13,30 +13,51 @@
         "tools": [
           {
             "id": 1,
-            "name": "jAVA"
+            "name": "JavaScript"
           },
           {
             "id": 2,
-            "name": "jAVA"
+            "name": "Java"
           }
         ]
       },
       {
         "id": 2,
-        "name": "Language & Platform",
+        "name": "UI Framework",
         "tools": [
           {
             "id": 1,
-            "name": "jAVA"
+            "name": "JavaScript"
           },
           {
             "id": 2,
-            "name": "jAVA"
+            "name": "Java"
           }
         ]
       }
     ],
-    "feature": ""
+    "feature": [
+      {
+        "id": 1,
+        "name": "Theme Switching",
+        "Description": "Light/Dark theme with smooth transitions and persistent preference storage"
+      },
+      {
+        "id": 2,
+        "name": "Theme Switching",
+        "Description": "Light/Dark theme with smooth transitions and persistent preference storage"
+      },
+      {
+        "id": 3,
+        "name": "Theme Switching",
+        "Description": "Light/Dark theme with smooth transitions and persistent preference storage"
+      },
+      {
+        "id": 4,
+        "name": "Theme Switching",
+        "Description": "Light/Dark theme with smooth transitions and persistent preference storage"
+      }
+    ]
   },
   {
     "id": 2,
@@ -52,30 +73,51 @@
         "tools": [
           {
             "id": 1,
-            "name": "jAVA"
+            "name": "JavaScript"
           },
           {
             "id": 2,
-            "name": "jAVA"
+            "name": "Java"
           }
         ]
       },
       {
         "id": 2,
-        "name": "Language & Platform",
+        "name": "UI Framework",
         "tools": [
           {
             "id": 1,
-            "name": "jAVA"
+            "name": "JavaScript"
           },
           {
             "id": 2,
-            "name": "jAVA"
+            "name": "Java"
           }
         ]
       }
     ],
-    "feature": ""
+    "feature": [
+      {
+        "id": 1,
+        "name": "Theme Switching",
+        "Description": "Light/Dark theme with smooth transitions and persistent preference storage"
+      },
+      {
+        "id": 2,
+        "name": "Theme Switching",
+        "Description": "Light/Dark theme with smooth transitions and persistent preference storage"
+      },
+      {
+        "id": 3,
+        "name": "Theme Switching",
+        "Description": "Light/Dark theme with smooth transitions and persistent preference storage"
+      },
+      {
+        "id": 4,
+        "name": "Theme Switching",
+        "Description": "Light/Dark theme with smooth transitions and persistent preference storage"
+      }
+    ]
   },
   {
     "id": 3,
@@ -91,29 +133,52 @@
         "tools": [
           {
             "id": 1,
-            "name": "jAVA"
+            "name": "JavaScript"
           },
           {
             "id": 2,
-            "name": "jAVA"
+            "name": "Java"
           }
         ]
       },
       {
         "id": 2,
-        "name": "Language & Platform",
+        "name": "UI Framework",
         "tools": [
           {
             "id": 1,
-            "name": "jAVA"
+            "name": "JavaScript"
           },
           {
             "id": 2,
-            "name": "jAVA"
+            "name": "Java"
           }
         ]
       }
     ],
-    "feature": ""
+    "feature": [
+      {
+        "id": 1,
+        "name": "Theme Switching",
+        "Description": "Light/Dark theme with smooth transitions and persistent preference storage"
+      },
+      {
+        "id": 2,
+        "name": "Theme Switching",
+        "Description": "Light/Dark theme with smooth transitions and persistent preference storage"
+      },
+      {
+        "id": 3,
+        "name": "Theme Switching",
+        "Description": "Light/Dark theme with smooth transitions and persistent preference storage"
+      },
+      {
+        "id": 4,
+        "name": "Theme Switching",
+        "Description": "Light/Dark theme with smooth transitions and persistent preference storage"
+      }
+    ]
   }
-]
+];
+
+export default work;

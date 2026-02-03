@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { MdArrowBackIos } from "react-icons/md";
 import transcript from "../../assets/Transcript.jpg";
 import certificate from "../../assets/Certificate.png";
+import sru from "../../assets/SRU_LOGO.png";
 
 const EducationDetail = () => {
   const View = "</> Code";
@@ -22,10 +23,15 @@ const EducationDetail = () => {
               {View}
             </a> */}
           </div>
-          <div className="w-full md:w-10/12 md:flex flex-col items-center mx-auto my-5 space-y-6">
-            <h1 className="mb-6 text-2xl sm:text-4xl font-bold text-gray-700 dark:text-gray-300">
-              Svay Rieng University
-            </h1>
+          <div className="w-full md:w-10/12 md:flex flex-col items-center mx-auto space-y-6 text-gray-700 dark:text-gray-300">
+            <div className="flex flex-col justify-center items-center">
+              <img src={sru} alt="" className="size-40 rounded-full mt-5" />
+              <h1 className="text-2xl sm:text-4xl font-bold ">
+                Svay Rieng University
+              </h1>
+              <p className="font-bold text-sm ">2020-2024</p>
+            </div>
+
             <img
               className="w-full border-2 border-amber-50 rounded-lg"
               src={certificate}

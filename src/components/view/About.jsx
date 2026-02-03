@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
 import sru from "../../assets/SRU_LOGO.png"
+import kpr from "../../assets/kpr-high-school.jpg"
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -45,7 +46,7 @@ const About = () => {
             <Link to="/kpr" className="box border sm:w-2/3 flex items-center ">
               <img
                 className="size-35 rounded-full"
-                src=""
+                src={kpr}
                 alt="Kampong Rou High Schoolz"
               />
               <div className="ml-6 text-gray-700 dark:text-gray-300">

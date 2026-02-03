@@ -58,6 +58,7 @@ function App() {
           <Route path="/sru" element={<EducationDetail />}/>
           <Route path="/kpr" element={<EducationKPR />}/>
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );

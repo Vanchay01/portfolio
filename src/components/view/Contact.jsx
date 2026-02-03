@@ -77,11 +77,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <footer className="w-full bg-white dark:bg-gray-900 shadow z-50">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-center">
-          <p className="font-medium">© 2026 Meas Vanchay. All Rights Reserved.</p>
-        </div>
-      </footer>
+      
     </article>
   );
 };

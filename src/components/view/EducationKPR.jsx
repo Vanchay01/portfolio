@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { MdArrowBackIos } from "react-icons/md";
 import kpr from "../../assets/kpr.png";
+import kprlogo from "../../assets/kpr-high-school.jpg"
 
 const EducationKPR = () => {
   const View = "</> Code";
@@ -22,6 +23,7 @@ const EducationKPR = () => {
             </a> */}
           </div>
           <div className="w-full md:w-10/12 md:flex flex-col items-center mx-auto my-5 space-y-6">
+            <img src={kprlogo} alt="" />
             <h1 className="mb-6 text-2xl sm:text-4xl font-bold text-gray-700 dark:text-gray-300">
               Kampong Rou High School
             </h1>
