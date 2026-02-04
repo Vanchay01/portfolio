@@ -1,11 +1,10 @@
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaCloudDownloadAlt } from "react-icons/fa";
 import profile from "../../upload/image/Profile-removebg-preview.png";
-import linkedin from "../../upload/image/link-logo.webp";
 
 const Home = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-slate-100 dark:bg-gray-900 text-gray-900 dark:text-white transition">
-      <div className="w-10/12 flex justify-center items-center">
+      <div className="w-full max-w-7xl px-4 flex justify-center items-center">
         <div className="w-full sm:w-1/2 sm:flex flex-col items-center justify-center ">
           <div className="max-w-xl text-4xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300">
             Hi,
@@ -24,6 +23,7 @@ const Home = () => {
             Developer. <br />{" "}
             <div className="flex items-center py-4 space-x-4">
               <a
+                className="hover:scale-130 transition duration-75"
                 href="https://www.linkedin.com/in/meas-vanchay-9799b036a/"
                 target="_blank"
                 rel="noreferrer"
@@ -31,6 +31,7 @@ const Home = () => {
                 <FaLinkedin size={37} color="#545397ff" />
               </a>
               <a
+                className="hover:scale-130 transition duration-75"
                 href="https://www.facebook.com/vanchay.21/"
                 target="_blank"
                 rel="noreferrer"
@@ -38,6 +39,7 @@ const Home = () => {
                 <FaFacebook size={37} color="#545397ff" />
               </a>
               <a
+                className="hover:scale-130 transition duration-75"
                 href="https://github.com/Vanchay01"
                 target="_blank"
                 rel="noreferrer"
@@ -49,11 +51,11 @@ const Home = () => {
                   const link = document.createElement("a");
                   link.href = "/CV Resume-Meas Vanchay.pdf";
                   link.download = "CV Resume-Meas Vanchay.pdf";
-                  link.click(); 
+                  link.click();
                 }}
-                className="bg-[#545397ff] h-12 px-4 text-base md:text-xl rounded-full cursor-pointer text-gray-100 dark:text-gray-100"
+                className="flex justify-center items-center bg-[#545397ff] h-10 gap-2 px-4 text-base md:text-xl rounded-full cursor-pointer text-gray-100 dark:text-gray-100 hover:scale-110 transition duration-75"
               >
-                Download CV
+                <FaCloudDownloadAlt /> Resume
               </button>
             </div>
           </div>
