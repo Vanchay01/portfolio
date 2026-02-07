@@ -2,7 +2,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { MdEmail } from "react-icons/md";
 import { IoMdPin } from "react-icons/io";
-import { FaPhoneSquareAlt } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaPhoneSquareAlt } from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
@@ -35,8 +35,9 @@ const Contact = () => {
         <div className="w-full md:w-1/2 pb-5 space-y-4 text-gray-700 dark:text-white transition-colors duration-400 ">
           <h1 className="text-4xl font-bold ">Contact Information</h1>
           <p>
-            We are committed to processing the information in order to contact
-            you and talk about your project.
+            I’m currently free and open to new opportunities, so please feel
+            free to reach me anytime if you’d like to work together, share an
+            idea, or simply start a conversation.
           </p>
           <div className="mt-10 flex items-center justify-start">
             <MdEmail size={25} className="mr-2" />
@@ -49,6 +50,32 @@ const Contact = () => {
           <div className="flex items-center justify-start">
             <FaPhoneSquareAlt size={25} className="mr-2" />
             <p>(855) 60446580</p>
+          </div>
+          <div className="flex items-center py-4 space-x-4">
+            <a
+              className="hover:scale-130 transition duration-75"
+              href="https://www.linkedin.com/in/meas-vanchay-9799b036a/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin size={37} color="#545397ff" />
+            </a>
+            <a
+              className="hover:scale-130 transition duration-75"
+              href="https://www.facebook.com/vanchay.21/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaFacebook size={37} color="#545397ff" />
+            </a>
+            <a
+              className="hover:scale-130 transition duration-75"
+              href="https://github.com/Vanchay01"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub size={37} color="#545397ff" />
+            </a>
           </div>
         </div>
         <div className="w-full md:w-1/2 md:flex justify-end">

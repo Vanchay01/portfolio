@@ -3,6 +3,7 @@ import work from "../../json/work.json"
 import { Link } from "react-router-dom";
 
 const Work = () => {
+  const pic = "https://4kwallpapers.com/images/walls/thumbs_3t/25036.jpg";
   return (
     <div className="w-full bg-gray-100 dark:bg-gray-900 flex justify-center py-6 transition-colors duration-300">
       <div className="w-full max-w-7xl px-4 pt-16 transition-colors duration-300">
@@ -11,14 +12,14 @@ const Work = () => {
         </h1>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
           {work.map((s) => (
-            <Link key={s.id} to={`work/${s.id}`} className="box-skill font-medium">
-              <div className="flex items-center">
+            <Link key={s.id} to={`work/${s.id}`} className="box-skill p-1 font-medium">
+              <div className="flex flex-col ">
                 <img
-                  className="size-6 mr-2"
-                  src={s.image}
+                  className="w-full rounded-lg"
+                  src={pic}
                   alt=""
                 />
-                <p>{s.name}</p>
+                <p className="m-2">{s.name}</p>
               </div>
             </Link>
           ))}
