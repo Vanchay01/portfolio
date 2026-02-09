@@ -11,7 +11,7 @@ const About = () => {
           <h1 className="max-w-xl text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300">
             About me
           </h1>
-          <p className="sm:text-xl py-5 md:px-5">
+          <p className="sm:text-xl py-5 md:px-5 text-justify">
             I am a passionate and active developer who enjoys building
             functional, efficient applications. I love solving problems,
             learning new programming concepts, and exploring modern
