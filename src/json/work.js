@@ -4,6 +4,8 @@ const work = [
     "name": "Portfolio",
     "postsition": "Front-end Development",
     "image": "cover_portfolio",
+    "github": "https://github.com/Vanchay01/portfolio",
+    "demo": "https://van-chay.vercel.app/",
     "framwork": "This project is building with React JS",
     "description": "A modern, responsive personal portfolio website built with React to showcase skills, projects, and contact information. The website highlights frontend development expertise and provides an interactive, user-friendly experience.",
     "technilogy": [
@@ -103,6 +105,8 @@ const work = [
     "name": "RESTfull APIs with MongoDB",
     "postsition": "Back-end Development",
     "image": "cover_api",
+    "github": "https://github.com/Vanchay01/REST-API-with-MongoDB",
+    "demo": "",
     "framwork": "This project is a full-stack RESTful API system built with Node.js and Express.js, designed to manage users and products through secure and well-structured endpoints.",
     "description": "It follows MVC architecture and applies the Repository Design Pattern to keep business logic, database access, and routing layers cleanly separated. The API supports full CRUD operations, uses JSON for data exchange, and is documented with Swagger UI for easy testing and integration.",
     "technilogy": [

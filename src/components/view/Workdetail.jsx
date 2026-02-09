@@ -7,11 +7,10 @@ import cover_portfolio from "../../assets/portfolio.jpg";
 import cover_api from "../../assets/api.jpg";
 
 const Workdetail = () => {
-  const pic = "https://4kwallpapers.com/images/walls/thumbs_3t/25036.jpg";
+  const viewcode = "</> View Code";
   const { id } = useParams();
   const work = getWorkById(id);
   console.log(work);
-  // console.log(work.feature);
 
   const images = {
     cover_portfolio,
@@ -21,7 +20,7 @@ const Workdetail = () => {
   return (
     <div className="bg-slate-100 dark:bg-gray-900 transition-colors duration-400 flex justify-center">
       <div className="w-full px-4 sm:px-0 sm:w-2/3 flex flex-col justify-center items-center py-4 transition-colors duration-400 ">
-        <div className="w-full flex justify-between transition-colors duration-400 mb-5 md:mb-15">
+        <div className="w-full flex justify-between items-center transition-colors duration-400 mb-5 md:mb-15">
           <button
             className="box-skill flex justify-center items-center"
             onClick={() => navigate(-1)}
@@ -29,6 +28,26 @@ const Workdetail = () => {
             <MdArrowBackIos />
             BACK
           </button>
+          <div className="flex justify-center items-center gap-3">
+            <a
+              className="box-skill"
+              href={work.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {viewcode}
+            </a>
+            {work.demo && (
+              <a
+                className="box-skill"
+                href={work.demo}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Live Demo
+              </a>
+            )}
+          </div>
         </div>
         <div className="w-full text-gray-700 dark:text-white ">
           <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-5 transition-colors duration-400 first-letter:uppercase">
@@ -38,7 +57,11 @@ const Workdetail = () => {
             {work.postsition}
           </h3>
           <div className="w-full mb-5 md:mb-10 transition-colors duration-400">
-            <img src={images[work.image]} alt="" className="w-full rounded-xl " />
+            <img
+              src={images[work.image]}
+              alt=""
+              className="w-full rounded-xl "
+            />
           </div>
           <h1 className="text-3xl font-bold mb-5 md:mb-8 transition-colors duration-400">
             Project Overview

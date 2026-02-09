@@ -12,11 +12,13 @@ export const Navbars = ({ dark, setDark }) => {
   };
   return (
     <nav className="fixed top-0 w-full bg-white dark:bg-gray-900 shadow z-50">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-          Meas Vanchay
-        </h1>
-        <div className="hidden md:flex text-gray-900 dark:text-slate-100 space-x-2">
+      <div className="w-full max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="w-1/2">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+            Meas Vanchay
+          </h1>
+        </div>
+        <div className="w-1/2 hidden md:flex justify-end items-center gap-3 text-gray-900 dark:text-slate-100">
           <button
             onClick={() => scrollToSection("home")}
             className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-yellow-400 hover:text-gray-900 transition "
