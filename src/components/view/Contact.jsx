@@ -2,7 +2,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { MdEmail } from "react-icons/md";
 import { IoMdPin } from "react-icons/io";
-import { FaFacebook, FaGithub, FaLinkedin, FaPhoneSquareAlt } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaPhoneSquareAlt, FaTelegram } from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
@@ -30,10 +30,10 @@ const Contact = () => {
   };
 
   return (
-    <article className=" bg-slate-100 dark:bg-gray-900 transition-colors duration-400 flex flex-col items-center">
-      <div className="md:flex justify-between w-full md:max-w-7xl p-4 transition-colors duration-400 ">
+    <article className=" bg-slate-100 dark:bg-gray-900 transition-colors duration-400 flex flex-col items-center py-6 ">
+      <div className="md:flex justify-between w-full md:max-w-7xl px-4 pt-16 transition-colors duration-400 ">
         <div className="w-full md:w-1/2 pb-5 space-y-4 text-gray-700 dark:text-white transition-colors duration-400 ">
-          <h1 className="text-4xl font-bold ">Contact Information</h1>
+          <h1 className="mb-6 text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300">Contact Information</h1>
           <p>
             I’m currently free and open to new opportunities, so please feel
             free to reach me anytime if you’d like to work together, share an
@@ -76,13 +76,21 @@ const Contact = () => {
             >
               <FaGithub size={37} color="#545397ff" />
             </a>
+            <a
+              className="hover:scale-130 transition duration-75"
+              href="https://t.me/vanchayyy"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaTelegram size={37} color="#545397ff" />
+            </a>
           </div>
         </div>
         <div className="w-full md:w-1/2 md:flex justify-end">
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="w-full space-y-4 md:max-w-sm p-4 border border-gray-900 dark:border-gray-100 rounded bg-white dark:bg-gray-800 transition-colors duration-400 "
+            className="w-full space-y-4 md:max-w-sm p-4  border-gray-900 dark:border-gray-100 rounded bg-white dark:bg-gray-800 transition-colors duration-400 "
           >
             <input
               type="hidden"
@@ -113,7 +121,7 @@ const Contact = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-purple-600 text-white px-6 py-2 rounded cursor-pointer hover:bg-purple-700 transition-colors duration-400"
+              className="w-full bg-[#545397ff] text-white px-6 py-2 rounded cursor-pointer hover:scale-105 transition duration-400"
             >
               Send Message
             </button>

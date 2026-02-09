@@ -11,7 +11,7 @@ const About = () => {
           <h1 className="max-w-xl text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300">
             About me
           </h1>
-          <p className="sm:text-xl sm:max-w-xl p-4">
+          <p className="sm:text-xl py-5 md:px-5">
             I am a passionate and active developer who enjoys building
             functional, efficient applications. I love solving problems,
             learning new programming concepts, and exploring modern
@@ -28,8 +28,8 @@ const About = () => {
           <h1 className="max-w-xl text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300">
             Education
           </h1>
-          <div className="w-full flex flex-col space-y-4 justify-center items-center py-4">
-            <Link to="/sru" className="box border sm:w-2/3 flex items-center ">
+          <div className="w-full flex flex-col space-y-4 justify-center items-center py-5 md:px-5">
+            <Link to="/sru" className="box border w-full flex items-center ">
               <img
                 className="size-35 rounded-full"
                 src={sru}
@@ -44,7 +44,7 @@ const About = () => {
                 <p className="text-sm ">2020-2024</p>
               </div>
             </Link>
-            <Link to="/kpr" className="box border sm:w-2/3 flex items-center ">
+            <Link to="/kpr" className="box border w-full flex items-center ">
               <img
                 className="size-35 rounded-full"
                 src={kpr}

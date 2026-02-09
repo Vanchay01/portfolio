@@ -6,7 +6,7 @@ const Skill = () => {
   return (
     <div className=" w-full bg-gray-100 dark:bg-gray-900 flex justify-center py-6 transition-colors duration-300">
       <div className="w-full max-w-7xl px-4 pt-16 transition-colors duration-300">
-        <h1 className="mb-4 text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300">
+        <h1 className="mb-6 text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300">
           Skills
         </h1>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
