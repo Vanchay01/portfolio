@@ -11,47 +11,47 @@ export const Navbars = ({ dark, setDark }) => {
     setOpen(false);
   };
   return (
-    <nav className="fixed top-0 w-full bg-white dark:bg-gray-900 shadow z-50">
+    <nav className="fixed top-0 w-full bg-white dark:bg-gray-950 shadow z-50 transition-all duration-300 ">
       <div className="w-full max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <div className="w-1/2">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+        <div className="w-1/2 text-gray-900 dark:text-white transition">
+          <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-300">
             Meas Vanchay
           </h1>
         </div>
         <div className="w-1/2 hidden md:flex justify-end items-center gap-3 text-gray-900 dark:text-slate-100">
           <button
             onClick={() => scrollToSection("home")}
-            className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-yellow-400 hover:text-gray-900 transition "
+            className="cursor-pointer px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-yellow-400 hover:text-gray-900 transition "
           >
             Home
           </button>
           <button
             onClick={() => scrollToSection("about")}
-            className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-yellow-400 hover:text-gray-900 transition"
+            className="cursor-pointer px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-yellow-400 hover:text-gray-900 transition"
           >
             About & Education
           </button>
           <button
             onClick={() => scrollToSection("skills")}
-            className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-yellow-400 hover:text-gray-900 transition"
+            className="cursor-pointer px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-yellow-400 hover:text-gray-900 transition"
           >
             Skills
           </button>
           <button
             onClick={() => scrollToSection("work")}
-            className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-yellow-400 hover:text-gray-900 transition"
+            className="cursor-pointer px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-yellow-400 hover:text-gray-900 transition"
           >
             Work
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-yellow-400 hover:text-gray-900 transition"
+            className="cursor-pointer px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-yellow-400 hover:text-gray-900 transition"
           >
             Contact Me
           </button>
           <button
             onClick={() => setDark(!dark)}
-            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:scale-105 transition"
+            className="cursor-pointer p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:scale-105 transition"
           >
             {dark ? "☀" : "🌙 "}
           </button>

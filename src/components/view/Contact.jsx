@@ -2,7 +2,13 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { MdEmail } from "react-icons/md";
 import { IoMdPin } from "react-icons/io";
-import { FaFacebook, FaGithub, FaLinkedin, FaPhoneSquareAlt, FaTelegram } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaPhoneSquareAlt,
+  FaTelegram,
+} from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
@@ -30,25 +36,27 @@ const Contact = () => {
   };
 
   return (
-    <article className=" bg-slate-100 dark:bg-gray-900 transition-colors duration-400 flex flex-col items-center py-6 ">
-      <div className="md:flex justify-between w-full md:max-w-7xl px-4 pt-16 transition-colors duration-400 ">
-        <div className="w-full md:w-1/2 pb-5 space-y-4 text-gray-700 dark:text-white transition-colors duration-400 ">
-          <h1 className="mb-6 text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300">Contact Information</h1>
+    <article className=" bg-slate-100 dark:bg-gray-900 transition-all duration-300 flex flex-col items-center py-6 ">
+      <div className="md:flex justify-between w-full md:max-w-7xl px-4 pt-16 transition-all duration-300 ">
+        <div className="w-full md:w-1/2 pb-5 space-y-4 text-gray-700 dark:text-white transition-all duration-300 ">
+          <h1 className="mb-6 text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300 transition-all duration-300">
+            Contact Information
+          </h1>
           <p>
             I’m currently free and open to new opportunities, so please feel
             free to reach me anytime if you’d like to work together, share an
             idea, or simply start a conversation.
           </p>
           <div className="mt-10 flex items-center justify-start">
-            <MdEmail size={25} className="mr-2" />
+            <MdEmail size={25} color="#FFD803" className="mr-2" />
             <p>chaydouble0@gmail.com</p>
           </div>
           <div className="flex items-center justify-start">
-            <IoMdPin size={25} className="mr-2" />
+            <IoMdPin size={25} color="#FFD803" className="mr-2" />
             <p>334 Kampong Rou, Svay Rieng</p>
           </div>
           <div className="flex items-center justify-start">
-            <FaPhoneSquareAlt size={25} className="mr-2" />
+            <FaPhoneSquareAlt color="#FFD803" size={25} className="mr-2" />
             <p>(855) 60446580</p>
           </div>
           <div className="flex items-center py-4 space-x-4">
@@ -58,7 +66,7 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <FaLinkedin size={37} color="#545397ff" />
+              <FaLinkedin size={37} color="#FFD803" />
             </a>
             <a
               className="hover:scale-130 transition duration-75"
@@ -66,7 +74,7 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <FaFacebook size={37} color="#545397ff" />
+              <FaFacebook size={37} color="#FFD803" />
             </a>
             <a
               className="hover:scale-130 transition duration-75"
@@ -74,15 +82,19 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <FaGithub size={37} color="#545397ff" />
+              <FaGithub size={37} color="#FFD803" />
             </a>
             <a
-              className="hover:scale-130 transition duration-75"
+              className="hover:scale-130 transition duration-75 "
               href="https://t.me/vanchayyy"
               target="_blank"
               rel="noreferrer"
             >
-              <FaTelegram size={37} color="#545397ff" />
+              <FaTelegram
+                size={37}
+                color="#FFD803"
+                className="animate-wiggle"
+              />
             </a>
           </div>
         </div>
@@ -90,7 +102,7 @@ const Contact = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="w-full space-y-4 md:max-w-sm p-4  border-gray-900 dark:border-gray-100 rounded bg-white dark:bg-gray-800 transition-colors duration-400 "
+            className="w-full space-y-4 md:max-w-sm p-4 border-gray-900 dark:border-gray-100 rounded transition-all duration-300 text-gray-700 dark:text-gray-300"
           >
             <input
               type="hidden"
@@ -98,30 +110,30 @@ const Contact = () => {
               value={new Date().toLocaleString()}
             />
             <input type="hidden" name="title" value="Website Contact" />
+            <label htmlFor="">Name</label>
             <input
               type="text"
               name="name"
-              placeholder="Name"
-              className="w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-colors duration-400"
+              className="w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-all duration-300"
               required
             />
+            <label htmlFor="">Email</label>
             <input
               type="email"
               name="user_email"
-              placeholder="Email"
-              className="w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-colors duration-400"
+              className="w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white "
               required
             />
+            <label htmlFor="">Message</label>
             <textarea
               name="message"
-              placeholder="Message"
-              className="w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-colors duration-400"
+              className="w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white "
               rows="5"
               required
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-[#545397ff] text-white px-6 py-2 rounded cursor-pointer hover:scale-105 transition duration-400"
+              className="w-full  box-button px-6 py-2 rounded cursor-pointer transition-all duration-300"
             >
               Send Message
             </button>

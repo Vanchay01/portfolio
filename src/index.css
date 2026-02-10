@@ -11,4 +11,23 @@
     @apply bg-white dark:bg-gray-800 text-black dark:text-white p-4 rounded-lg transition 
     duration-400 cursor-pointer hover:scale-105 shadow-2xl dark:shadow-[0_10px_30px_rgba(0,0,0,0.7)];
   }
+    .box-button {
+    @apply bg-white dark:bg-gray-800 text-gray-600 dark:text-white p-4 rounded-lg duration-400 hover:bg-yellow-400
+    cursor-pointer hover:scale-105 transition shadow-2xl dark:shadow-[0_10px_30px_rgba(0,0,0,0.7)]
+  }
+}
+body {
+  font-family: "Patrick Hand SC", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.reveal {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
 }

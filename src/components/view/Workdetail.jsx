@@ -22,7 +22,7 @@ const Workdetail = () => {
       <div className="w-full px-4 sm:px-0 sm:w-2/3 flex flex-col justify-center items-center py-4 transition-colors duration-400 ">
         <div className="w-full flex justify-between items-center transition-colors duration-400 mb-5 md:mb-15">
           <button
-            className="box-skill flex justify-center items-center"
+            className="box-button flex justify-center items-center"
             onClick={() => navigate(-1)}
           >
             <MdArrowBackIos />
@@ -30,7 +30,7 @@ const Workdetail = () => {
           </button>
           <div className="flex justify-center items-center gap-3">
             <a
-              className="box-skill"
+              className="box-button"
               href={work.github}
               target="_blank"
               rel="noreferrer"
@@ -39,7 +39,7 @@ const Workdetail = () => {
             </a>
             {work.demo && (
               <a
-                className="box-skill"
+                className="box-button"
                 href={work.demo}
                 target="_blank"
                 rel="noreferrer"
@@ -90,7 +90,7 @@ const Workdetail = () => {
                     {Object.entries(value.tools).map(([toolKey, tool]) => (
                       <p
                         key={toolKey}
-                        className="rounded-lg border px-2 py-1 text-center first-letter:uppercase"
+                        className="bg-yellow-400 text-white rounded-lg border px-2 py-1 text-center first-letter:uppercase"
                       >
                         {tool.name}
                       </p>
@@ -112,7 +112,7 @@ const Workdetail = () => {
                 >
                   <div className="flex justify-start">
                     <div className="flex justify-center items-start mr-4">
-                      <p className="size-10 flex justify-center items-center rounded-full bg-green-600 text-white  text-lg font-bold transition-colors duration-400">
+                      <p className="size-10 flex justify-center items-center rounded-full bg-yellow-400 text-white text-lg font-bold transition-colors duration-400">
                         {1 + index}
                       </p>
                     </div>

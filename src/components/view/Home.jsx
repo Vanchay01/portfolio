@@ -1,12 +1,14 @@
 import { FaFacebook, FaGithub, FaLinkedin, FaCloudDownloadAlt } from "react-icons/fa";
 import profile from "../../upload/image/Profile-removebg-preview.png";
+import useScrollReveal from "../useScrollReveal";
 
 const Home = () => {
+  useScrollReveal();
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-slate-100 dark:bg-gray-900 text-gray-900 dark:text-white transition">
+    <div className="h-screen flex flex-col justify-center items-center bg-slate-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-300">
       <div className="w-full max-w-7xl px-4 flex justify-center items-center">
         <div className="w-full sm:w-1/2 sm:flex flex-col items-center justify-center ">
-          <div className="max-w-xl text-4xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300">
+          <div className="max-w-xl text-4xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300 transition-all duration-300">
             Hi,
             <br /> I'm [
             <span className="text-green-600 dark:text-green-500">
@@ -28,7 +30,7 @@ const Home = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaLinkedin size={37} color="#545397ff" />
+                <FaLinkedin size={37} color="#FFD803" />
               </a>
               <a
                 className="hover:scale-130 transition duration-75"
@@ -36,7 +38,7 @@ const Home = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaFacebook size={37} color="#545397ff" />
+                <FaFacebook size={37} color="#FFD803" />
               </a>
               <a
                 className="hover:scale-130 transition duration-75"
@@ -44,7 +46,7 @@ const Home = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaGithub size={37} color="#545397ff" />
+                <FaGithub size={37} color="#FFD803" />
               </a>
               <button
                 onClick={() => {
@@ -53,18 +55,18 @@ const Home = () => {
                   link.download = "CV Resume-Meas Vanchay.pdf";
                   link.click();
                 }}
-                className="flex justify-center items-center bg-[#545397ff] h-10 gap-2 px-4 text-base md:text-xl rounded-full cursor-pointer text-gray-100 dark:text-gray-100 hover:scale-110 transition duration-75"
+                className="flex justify-center items-center bg-yellow-400 h-10 gap-2 px-4 text-base md:text-xl rounded-full cursor-pointer text-white dark:text-gray-900 hover:scale-110 transition duration-75"
               >
                 <FaCloudDownloadAlt /> Resume
               </button>
             </div>
           </div>
         </div>
-        <div className="w-1/2 hidden sm:flex items-center justify-center ">
+        <div className="reveal w-1/2 hidden sm:flex items-center justify-center ">
           <img
             src={profile}
             alt=""
-            className="dark:bg-gray-800 bg-white w-72 rounded-full border-4 border-gray-900 dark:border-gray-100 transition"
+            className="gr bg-yellow-400 w-72 rounded-full border-4 border-gray-900 dark:border-gray-100 transition-all duration-300"
           />
         </div>
       </div>
