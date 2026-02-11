@@ -1,3 +1,5 @@
+import Srcoll from "./Srcoll";
+
 export const Footer = () => {
   return (
     <article className=" bg-white dark:bg-gray-950 transition-all duration-300 flex flex-col items-center text-gray-700 dark:text-gray-300">
@@ -8,6 +10,7 @@ export const Footer = () => {
           </p>
         </div>
       </footer>
+      <Srcoll />
     </article>
   );
 };

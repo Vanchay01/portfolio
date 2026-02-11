@@ -2,10 +2,18 @@ import { MapPin } from "lucide-react";
 import sru from "../../assets/SRU_LOGO.png"
 import kpr from "../../assets/kpr-high-school.jpg"
 import { Link } from "react-router-dom";
-import useScrollReveal from "../useScrollReveal";
 
 const About = () => {
-  useScrollReveal();
+  const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('opacity-100','translate-y-0');
+      observer.unobserve(entry.target); // run once
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));``
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-slate-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 transition-all duration-300">
       <div className="w-full max-w-7xl px-4 block sm:flex justify-center ">
@@ -31,7 +39,7 @@ const About = () => {
             Education
           </h1>
           <div className="w-full flex flex-col space-y-4 justify-center items-center py-5 md:px-5">
-            <Link to="/sru" className="reveal box border w-full flex items-center ">
+            <Link to="/sru" className="reveal opacity-0 translate-y-10  ease-out box border w-full flex items-center ">
               <img
                 className="size-35 rounded-full"
                 src={sru}
@@ -46,7 +54,7 @@ const About = () => {
                 <p className="text-sm ">2020-2024</p>
               </div>
             </Link>
-            <Link to="/kpr" className="reveal box border w-full flex items-center transition-all duration-300 ">
+            <Link to="/kpr" className="reveal opacity-0 translate-y-10  ease-out box border w-full flex items-center transition-all duration-300  ">
               <img
                 className="size-35 rounded-full"
                 src={kpr}

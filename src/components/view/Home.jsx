@@ -1,9 +1,7 @@
 import { FaFacebook, FaGithub, FaLinkedin, FaCloudDownloadAlt } from "react-icons/fa";
 import profile from "../../upload/image/Profile-removebg-preview.png";
-import useScrollReveal from "../useScrollReveal";
 
 const Home = () => {
-  useScrollReveal();
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-slate-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-300">
       <div className="w-full max-w-7xl px-4 flex justify-center items-center">

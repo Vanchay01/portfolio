@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+body {
+  font-family: "Patrick Hand SC", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Custom Components */
 @layer components {
   .box {
@@ -16,18 +22,48 @@
     cursor-pointer hover:scale-105 transition shadow-2xl dark:shadow-[0_10px_30px_rgba(0,0,0,0.7)]
   }
 }
-body {
-  font-family: "Patrick Hand SC", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-.reveal {
-  opacity: 0;
-  transform: translateX(100px);
-  transition: all 0.7s ease;
+
+@theme {
+  --animate-wiggle-left: wiggle-left 0.7s ease-in-out;
+  @keyframes wiggle-left {
+    0% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1
+    }
+  }
+
+  --animate-wiggle-right: wiggle-right 0.7s ease-in-out;
+  @keyframes wiggle-right {
+    0%{
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0);
+      opacity: 1
+    }
+  }
+
+
+
+  --animate-reveal: reveal 1s ease-out both;
+
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
 }
 
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+
+
+
