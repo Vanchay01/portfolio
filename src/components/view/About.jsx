@@ -10,8 +10,8 @@ const About = () => {
     triggerOnce: true,
   });
   return (
-    <div className="overflow-clip h-screen flex flex-col justify-center items-center bg-slate-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 transition-all duration-300">
-      <div className="w-full max-w-7xl px-4 block sm:flex justify-center ">
+    <div className="overflow-clip py-6 md:h-screen flex flex-col justify-center items-center bg-slate-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 transition-all duration-300">
+      <div className="w-full max-w-7xl px-4 pt-16 block sm:flex justify-center ">
         <div
           ref={ref}
           className={` w-full sm:w-1/2 sm:flex flex-col justify-center items-center transition-all duration-700`}
