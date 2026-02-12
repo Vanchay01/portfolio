@@ -2,13 +2,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { MdEmail } from "react-icons/md";
 import { IoMdPin } from "react-icons/io";
-import {
-  FaFacebook,
-  FaGithub,
-  FaLinkedin,
-  FaPhoneSquareAlt,
-  FaTelegram,
-} from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaPhoneSquareAlt, FaTelegram } from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
@@ -36,30 +30,28 @@ const Contact = () => {
   };
 
   return (
-    <article className=" bg-slate-100 dark:bg-gray-900 transition-all duration-300 flex flex-col items-center py-6 ">
-      <div className="md:flex justify-between w-full md:max-w-7xl px-4 pt-16 transition-all duration-300 ">
-        <div className="w-full md:w-1/2 pb-5 space-y-4 text-gray-700 dark:text-white transition-all duration-300 ">
-          <h1 className="mb-6 text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300 transition-all duration-300">
-            Contact Information
-          </h1>
-          <p>
+    <article className="overflow-hidden bg-slate-100  dark:bg-gray-900 transition-colors duration-400 flex flex-col items-center py-6 ">
+      <div className="md:flex justify-between w-full md:max-w-7xl px-4 pt-16 transition-colors duration-400 ">
+        <div className="w-full md:w-1/2 pb-5 space-y-4 text-gray-700 dark:text-white transition-colors duration-400 ">
+          <h1 className="animate-wiggle-left opacity-0 [animation-delay:0ms] mb-6 text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300  ">Contact Information</h1>
+          <p className="animate-wiggle-left opacity-0 [animation-delay:50ms]">
             I’m currently free and open to new opportunities, so please feel
             free to reach me anytime if you’d like to work together, share an
             idea, or simply start a conversation.
           </p>
-          <div className="mt-10 flex items-center justify-start">
+          <div className="animate-wiggle-left opacity-0 [animation-delay:100ms] mt-10 flex items-center justify-start">
             <MdEmail size={25} color="#FFD803" className="mr-2" />
             <p>chaydouble0@gmail.com</p>
           </div>
-          <div className="flex items-center justify-start">
+          <div className="animate-wiggle-left opacity-0 [animation-delay:125ms] flex items-center justify-start">
             <IoMdPin size={25} color="#FFD803" className="mr-2" />
             <p>334 Kampong Rou, Svay Rieng</p>
           </div>
-          <div className="flex items-center justify-start">
+          <div className="animate-wiggle-left opacity-0 [animation-delay:150ms] flex items-center justify-start">
             <FaPhoneSquareAlt color="#FFD803" size={25} className="mr-2" />
             <p>(855) 60446580</p>
           </div>
-          <div className="flex items-center py-4 space-x-4">
+          <div className="animate-wiggle-left opacity-0 [animation-delay:200ms] flex items-center py-4 space-x-4">
             <a
               className="hover:scale-130 transition duration-75"
               href="https://www.linkedin.com/in/meas-vanchay-9799b036a/"
@@ -90,19 +82,15 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <FaTelegram
-                size={37}
-                color="#FFD803"
-                className="animate-wiggle"
-              />
+              <FaTelegram size={37} color="#FFD803" />
             </a>
           </div>
         </div>
-        <div className="w-full md:w-1/2 md:flex justify-end">
+        <div className=" w-full md:w-1/2 md:flex justify-end  ">
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="w-full space-y-4 md:max-w-sm p-4 border-gray-900 dark:border-gray-100 rounded transition-all duration-300 text-gray-700 dark:text-gray-300"
+            className="w-full space-y-4 md:max-w-sm p-4 border-gray-900 dark:border-gray-100 rounded transition-colors duration-400 text-gray-700 dark:text-gray-300"
           >
             <input
               type="hidden"
@@ -110,30 +98,30 @@ const Contact = () => {
               value={new Date().toLocaleString()}
             />
             <input type="hidden" name="title" value="Website Contact" />
-            <label htmlFor="">Name</label>
+            <label htmlFor="" className="animate-wiggle-right opacity-0 [animation-delay:350ms]">Name</label>
             <input
               type="text"
               name="name"
-              className="w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-all duration-300"
+              className="animate-wiggle-right opacity-0 [animation-delay:0ms] w-full  p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-colors duration-400"
               required
             />
-            <label htmlFor="">Email</label>
+            <label htmlFor="" className="animate-wiggle-right opacity-0 [animation-delay:450ms]">Email</label>
             <input
               type="email"
               name="user_email"
-              className="w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white "
+              className="animate-wiggle-right opacity-0 [animation-delay:50ms] w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-colors duration-400"
               required
             />
-            <label htmlFor="">Message</label>
+            <label htmlFor="" className="animate-wiggle-right opacity-0 [animation-delay:550ms]">Message</label>
             <textarea
               name="message"
-              className="w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white "
+              className="animate-wiggle-right opacity-0 [animation-delay:100ms] w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-colors duration-400"
               rows="5"
               required
             ></textarea>
             <button
               type="submit"
-              className="w-full  box-button px-6 py-2 rounded cursor-pointer transition-all duration-300"
+              className=" animate-wiggle-right opacity-0 [animation-delay:150ms] hover:blur-5 w-full  box-button px-6 py-2 rounded cursor-pointer transition duration-400"
             >
               Send Message
             </button>

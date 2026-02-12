@@ -8,7 +8,7 @@ const EducationDetail = () => {
   const View = "</> Code";
   const navigate = useNavigate();
   return (
-    <div className=" bg-slate-100 dark:bg-gray-900 transition-colors duration-400 flex flex-col items-center">
+    <div className="overflow-clip bg-slate-100 dark:bg-gray-900 transition-colors duration-400 flex flex-col items-center">
       <div className=" w-full sm:w-2/3 bg-gray-100 dark:bg-gray-900 flex justify-center py-4 transition-colors duration-400 ">
         <div className="w-full max-w-7xl px-4 transition-colors duration-400 ">
           <div className="flex justify-between items-center pb-4">

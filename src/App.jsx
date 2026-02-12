@@ -55,8 +55,8 @@ function App() {
             }
           />
           <Route path="/work/:id" element={<Workdetail />} />
-          <Route path="/sru" element={<EducationDetail />}/>
-          <Route path="/kpr" element={<EducationKPR />}/>
+          <Route path="/sru" element={<EducationDetail />} />
+          <Route path="/kpr" element={<EducationKPR />} />
         </Routes>
         <Footer />
       </div>

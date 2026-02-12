@@ -1,4 +1,4 @@
-import Srcoll from "./Srcoll";
+import Srcoll from "./ScrollTrigger";
 
 export const Footer = () => {
   return (
@@ -10,7 +10,6 @@ export const Footer = () => {
           </p>
         </div>
       </footer>
-      <Srcoll />
     </article>
   );
 };

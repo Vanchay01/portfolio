@@ -18,7 +18,7 @@ const Workdetail = () => {
   };
   const navigate = useNavigate();
   return (
-    <div className="bg-slate-100 dark:bg-gray-900 transition-colors duration-400 flex justify-center">
+    <div className="overflow-hidden bg-slate-100 dark:bg-gray-900 transition-colors duration-400 flex justify-center">
       <div className="w-full px-4 sm:px-0 sm:w-2/3 flex flex-col justify-center items-center py-4 transition-colors duration-400 ">
         <div className="w-full flex justify-between items-center transition-colors duration-400 mb-5 md:mb-15">
           <button

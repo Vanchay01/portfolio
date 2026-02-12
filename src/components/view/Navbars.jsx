@@ -11,7 +11,7 @@ export const Navbars = ({ dark, setDark }) => {
     setOpen(false);
   };
   return (
-    <nav className="fixed top-0 w-full bg-white dark:bg-gray-950 shadow z-50 transition-all duration-300 ">
+    <nav className="overflow-hidden fixed top-0 w-full bg-white dark:bg-gray-950 shadow z-50 transition-all duration-300 ">
       <div className="w-full max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="w-1/2 text-gray-900 dark:text-white transition">
           <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-300">
