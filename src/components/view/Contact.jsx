@@ -2,11 +2,22 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { MdEmail } from "react-icons/md";
 import { IoMdPin } from "react-icons/io";
-import { FaFacebook, FaGithub, FaLinkedin, FaPhoneSquareAlt, FaTelegram } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaPhoneSquareAlt,
+  FaTelegram,
+} from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
-  const form = useRef();
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
 
+  const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -32,26 +43,55 @@ const Contact = () => {
   return (
     <article className="overflow-hidden bg-slate-100  dark:bg-gray-900 transition-colors duration-400 flex flex-col items-center py-6 ">
       <div className="md:flex justify-between w-full md:max-w-7xl px-4 pt-16 transition-colors duration-400 ">
-        <div className="w-full md:w-1/2 pb-5 space-y-4 text-gray-700 dark:text-white transition-colors duration-400 ">
-          <h1 className="animate-wiggle-left opacity-0 [animation-delay:0ms] mb-6 text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300  ">Contact Information</h1>
-          <p className="animate-wiggle-left opacity-0 [animation-delay:50ms]">
+        <div
+          ref={ref}
+          className="w-full md:w-1/2 pb-5 space-y-4 text-gray-700 dark:text-white"
+        >
+          <h1
+            style={{ transitionDelay: "0ms" }}
+            className={`mb-6 text-2xl sm:text-6xl font-bold text-gray-700 dark:text-gray-300 transition-all duration-700
+            ${
+              inView
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-[-400px]"
+            }
+            `}
+          >
+            Contact Information
+          </h1>
+          <p
+            style={{ transitionDelay: "50ms" }}
+            className={` transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[-400px]"}`}
+          >
             I’m currently free and open to new opportunities, so please feel
             free to reach me anytime if you’d like to work together, share an
             idea, or simply start a conversation.
           </p>
-          <div className="animate-wiggle-left opacity-0 [animation-delay:100ms] mt-10 flex items-center justify-start">
+          <div
+            style={{ transitionDelay: "100ms" }}
+            className={`mt-10 flex items-center justify-start transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[-400px]"}`}
+          >
             <MdEmail size={25} color="#FFD803" className="mr-2" />
             <p>chaydouble0@gmail.com</p>
           </div>
-          <div className="animate-wiggle-left opacity-0 [animation-delay:125ms] flex items-center justify-start">
+          <div
+            style={{ transitionDelay: "125ms" }}
+            className={`flex items-center justify-start transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[-400px]"}`}
+          >
             <IoMdPin size={25} color="#FFD803" className="mr-2" />
             <p>334 Kampong Rou, Svay Rieng</p>
           </div>
-          <div className="animate-wiggle-left opacity-0 [animation-delay:150ms] flex items-center justify-start">
+          <div
+            style={{ transitionDelay: "150ms" }}
+            className={`flex items-center justify-start transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[-400px]"}`}
+          >
             <FaPhoneSquareAlt color="#FFD803" size={25} className="mr-2" />
             <p>(855) 60446580</p>
           </div>
-          <div className="animate-wiggle-left opacity-0 [animation-delay:200ms] flex items-center py-4 space-x-4">
+          <div
+            style={{ transitionDelay: "200ms" }}
+            className={`flex items-center py-4 space-x-4 transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[-400px]"}`}
+          >
             <a
               className="hover:scale-130 transition duration-75"
               href="https://www.linkedin.com/in/meas-vanchay-9799b036a/"
@@ -86,7 +126,7 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <div className=" w-full md:w-1/2 md:flex justify-end  ">
+        <div ref={ref} className=" w-full md:w-1/2 md:flex justify-end  ">
           <form
             ref={form}
             onSubmit={sendEmail}
@@ -98,30 +138,58 @@ const Contact = () => {
               value={new Date().toLocaleString()}
             />
             <input type="hidden" name="title" value="Website Contact" />
-            <label htmlFor="" className="animate-wiggle-right opacity-0 [animation-delay:350ms]">Name</label>
+            <h1
+              htmlFor=""
+              style={{ transitionDelay: "0ms" }}
+              className={`transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[400px]"}`}
+            >
+              Name
+            </h1>
             <input
               type="text"
               name="name"
-              className="animate-wiggle-right opacity-0 [animation-delay:0ms] w-full  p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-colors duration-400"
+              style={{ transitionDelay: "50ms" }}
+              className={`w-full  p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[400px]"}`}
               required
-            />
-            <label htmlFor="" className="animate-wiggle-right opacity-0 [animation-delay:450ms]">Email</label>
+            ></input>
+            <h1
+              htmlFor=""
+              style={{ transitionDelay: "100ms" }}
+              className={`transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[400px]"}`}
+            >
+              Email
+            </h1>
             <input
               type="email"
               name="user_email"
-              className="animate-wiggle-right opacity-0 [animation-delay:50ms] w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-colors duration-400"
+              style={{ transitionDelay: "150ms" }}
+              className={`w-full  p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[400px]"}`}
               required
             />
-            <label htmlFor="" className="animate-wiggle-right opacity-0 [animation-delay:550ms]">Message</label>
+            <h1
+              htmlFor=""
+              style={{ transitionDelay: "200ms" }}
+              className={`transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[400px]"}`}
+            >
+              Message
+            </h1>
             <textarea
               name="message"
-              className="animate-wiggle-right opacity-0 [animation-delay:100ms] w-full p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-colors duration-400"
+              style={{ transitionDelay: "250ms" }}
+              className={`w-full  p-3 border rounded border-gray-900 dark:border-gray-100 text-gray-700 dark:text-white transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[400px]"}`}
               rows="5"
               required
             ></textarea>
             <button
               type="submit"
-              className=" animate-wiggle-right opacity-0 [animation-delay:150ms] hover:blur-5 w-full  box-button px-6 py-2 rounded cursor-pointer transition duration-400"
+              style={{ transitionDelay: "300ms" }}
+              className={`hover:blur-5 w-full  box-button px-6 py-2 rounded cursor-pointer transition-all duration-700
+                ${
+                  inView
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 translate-x-[400px]"
+                }
+                `}
             >
               Send Message
             </button>

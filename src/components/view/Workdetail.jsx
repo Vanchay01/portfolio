@@ -5,6 +5,7 @@ import { getWorkById } from "../../data/WorkData";
 
 import cover_portfolio from "../../assets/portfolio.jpg";
 import cover_api from "../../assets/api.jpg";
+import { useInView } from "react-intersection-observer";
 
 const Workdetail = () => {
   const viewcode = "</> View Code";
@@ -17,6 +18,11 @@ const Workdetail = () => {
     cover_api,
   };
   const navigate = useNavigate();
+
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
   return (
     <div className="overflow-hidden bg-slate-100 dark:bg-gray-900 transition-colors duration-400 flex justify-center">
       <div className="w-full px-4 sm:px-0 sm:w-2/3 flex flex-col justify-center items-center py-4 transition-colors duration-400 ">
@@ -53,7 +59,7 @@ const Workdetail = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-5 transition-colors duration-400 first-letter:uppercase">
             {work.name}
           </h1>
-          <h3 className="text-xs md:text-lg font-bold mb-3 md:mb-5 transition-colors duration-400 first-letter:uppercase">
+          <h3 className="text-xs text-yellow-400 md:text-lg font-bold mb-3 md:mb-5 transition-colors duration-400 first-letter:uppercase">
             {work.postsition}
           </h3>
           <div className="w-full mb-5 md:mb-10 transition-colors duration-400">
@@ -76,10 +82,17 @@ const Workdetail = () => {
             Techniology Stack
           </h1>
           <div className="md:grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-10 ">
-            {Object.entries(work.technilogy).map(([key, value], index) => (
+            {Object.entries(work.technilogy).map(([key, value], i) => (
               <div
+                ref={ref}
                 key={key}
-                className="box mt-4 text-gray-700 dark:text-white cursor-default"
+                style={{ transitionDelay: `${i * 300}ms` }}
+                className={`box mt-4 text-gray-700 dark:text-white cursor-default transition-all duration-700
+                  ${
+                    inView
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-10"
+                  }`}
               >
                 <div className="flex flex-col justify-start ">
                   <p className="text-lg mb-2 font-bold transition-colors duration-400 first-letter:uppercase">
@@ -107,8 +120,15 @@ const Workdetail = () => {
             {Object.entries(work?.key_Feature || {}).map(
               ([key, value], index) => (
                 <div
+                  ref={ref}
                   key={index}
-                  className="box mt-4 text-gray-700 dark:text-white cursor-default"
+                  style={{ transitionDelay: `${index * 300}ms` }}
+                  className={`box mt-4 text-gray-700 dark:text-white cursor-default transition-all duration-700
+                  ${
+                    inView
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-10"
+                  }`}
                 >
                   <div className="flex justify-start">
                     <div className="flex justify-center items-start mr-4">
