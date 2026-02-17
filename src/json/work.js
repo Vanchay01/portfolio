@@ -10,7 +10,7 @@ const work = [
     "description": "A modern, responsive personal portfolio website built with React to showcase skills, projects, and contact information. The website highlights frontend development expertise and provides an interactive, user-friendly experience.",
     "technilogy": [
       {
-        "id": 1,
+        "id": 1, 
         "name": "Language & Platform",
         "tools": [
           {
